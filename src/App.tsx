@@ -2,8 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { Route, BrowserRouter, Routes } from 'react-router-dom'
 
-function App() {
+const About = () => {
+
+  return (
+    <>
+      This is the about page
+    </>
+  )
+}
+
+const Home = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -29,6 +39,17 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About/>} />
+        </Routes>
+    </BrowserRouter>
   )
 }
 
