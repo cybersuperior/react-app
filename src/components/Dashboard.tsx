@@ -13,7 +13,7 @@ export const Dashboard = () => {
            </Card>
         </Grid>
         <Grid item xs={6}>
-        <Typography variant={"h5"}> This is the right side of the page in an h1 header</Typography>
+        <Typography variant={"h5"}> This is the right side of the page in an h5 header</Typography>
         </Grid>
     </Grid>)
 }
