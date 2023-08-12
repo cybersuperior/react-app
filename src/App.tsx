@@ -1,5 +1,6 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Dashboard } from './components/Dashboard'
+import { SideNavBar } from './components/SideNavBar'
 
 const About = () => {
 
@@ -14,8 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        
+      <Route element={<SideNavBar />}>
         <Route path="/" element={<Dashboard/>} />
         <Route path="/about" element={<About/>} />
+        </Route>
         </Routes>
     </BrowserRouter>
   )
