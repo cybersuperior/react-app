@@ -1,27 +1,32 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Dashboard } from './components/Dashboard'
 import { SideNavBar } from './components/SideNavBar'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { WithSideNav } from './components/WithSideNav'
 
-const About = () => {
-
-  return (
-    <>
-      This is the about page
-    </>
-  )
-}
-
-function App() {
+const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        
-      <Route element={<SideNavBar />}>
-        <Route path="/" element={<Dashboard/>} />
-        <Route path="/about" element={<About/>} />
+      <Route element={<WithSideNav />}>
+        <Route path="/dashboard" element={<Dashboard/>} />
         </Route>
         </Routes>
     </BrowserRouter>
+  )
+}
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={darkTheme}>
+    <AppRouter/>
+    </ThemeProvider>
   )
 }
 

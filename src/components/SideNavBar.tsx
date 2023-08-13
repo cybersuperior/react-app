@@ -1,6 +1,10 @@
-import { CssBaseline, Drawer, List, ListItem, ListItemIcon, ListItemText, Toolbar } from "@mui/material"
+import { Dashboard } from "@mui/icons-material"
+import { CssBaseline, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from "@mui/material"
+import { useNavigate } from "react-router-dom"
 
 export const SideNavBar = () => {
+  const navigate = useNavigate()
+
   return (
     <div style={{display: "flex"}}>
     
@@ -15,25 +19,34 @@ export const SideNavBar = () => {
         sx={{
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 80,
+            width: 180,
             boxSizing: "border-box",
-            position: "relative",
-            whiteSpace: "nowrap"
+            whiteSpace: "nowrap",
+            height: '100vh'
           }
         }}
         variant="permanent"
         anchor="left"
       >
-        <Toolbar />
-        <List>
-        <ListItem
+        <List sx={{marginTop: '20px'}}>
+        <ListItemButton 
       key={"Dashboard"}
+      onClick={() => { navigate("")}}
+      divider
     >
+      <ListItemIcon
+        sx={{
+          width: "12px",
+          minWidth: "30px"
+        }}
+      >
+        <Dashboard/>
+      </ListItemIcon>
       <ListItemText
         primaryTypographyProps={{ fontSize: "14px" }}
         primary={"Dashboard"}
       />
-    </ListItem>
+    </ListItemButton>
         </List>
       </Drawer>
       
