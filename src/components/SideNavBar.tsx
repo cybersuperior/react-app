@@ -1,10 +1,40 @@
-import { Dashboard } from "@mui/icons-material"
-import { CssBaseline, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from "@mui/material"
+import { Dashboard, Feed, TableRows } from "@mui/icons-material"
+import { CssBaseline, Drawer, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
-export const SideNavBar = () => {
+type SideNavBarListItemProps = {
+  text: string;
+  route: string;
+  icon: JSX.Element;
+}
+
+export const SideNavBarListItem = ({text, route, icon}: SideNavBarListItemProps) => {
   const navigate = useNavigate()
 
+  return (
+    <ListItemButton 
+    key={text}
+    onClick={() => { navigate(route)}}
+    divider
+  >
+    <ListItemIcon
+      sx={{
+        width: "12px",
+        minWidth: "30px"
+      }}
+    >
+    {icon}
+    </ListItemIcon>
+    <ListItemText
+      primaryTypographyProps={{ fontSize: "16px" }}
+      primary={text}
+    />
+  </ListItemButton>
+  )
+}
+
+
+export const SideNavBar = () => {
   return (
     <div style={{display: "flex"}}>
     
@@ -19,34 +49,20 @@ export const SideNavBar = () => {
         sx={{
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 180,
+            width: 215,
             boxSizing: "border-box",
             whiteSpace: "nowrap",
-            height: '100vh'
+            height: '100vh',
+            position: 'relative'
           }
         }}
         variant="permanent"
         anchor="left"
       >
         <List sx={{marginTop: '20px'}}>
-        <ListItemButton 
-      key={"Dashboard"}
-      onClick={() => { navigate("")}}
-      divider
-    >
-      <ListItemIcon
-        sx={{
-          width: "12px",
-          minWidth: "30px"
-        }}
-      >
-        <Dashboard/>
-      </ListItemIcon>
-      <ListItemText
-        primaryTypographyProps={{ fontSize: "14px" }}
-        primary={"Dashboard"}
-      />
-    </ListItemButton>
+        <SideNavBarListItem text={"Dashboard"} route={"/dashboard"} icon={<Dashboard/>}/>
+        <SideNavBarListItem text={"Table (Coming soon)"} route={"/table"} icon={<TableRows/>}/>
+        <SideNavBarListItem text={"Form (Coming soon)"} route={"/form"} icon={<Feed/>}/>
         </List>
       </Drawer>
       

@@ -1,18 +1,31 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material"
+import { Card, CardContent, Grid } from "@mui/material"
+import { BarChart } from "@mui/x-charts"
 
 export const Dashboard = () => {
     return (
     <Grid container spacing={8}>
-        <Grid item xs={6}>    
+        <Grid item xs={4}>    
     <Card sx={{ boxShadow: 3 }} >
         <CardContent>
+        <BarChart
+  xAxis={[
+    {
+      id: 'barCategories',
+      data: ['bar A', 'bar B', 'bar C'],
+      scaleType: 'band',
+    },
+  ]}
+  series={[
+    {
+      data: [2, 5, 3],
+    },
+  ]}
+  sx={{ width: 1, height: 1 }}
+/>
 
-        <Typography variant={"h6"}>This is the left side of the page in an h6 header</Typography> 
+
         </CardContent>
            </Card>
-        </Grid>
-        <Grid item xs={6}>
-        <Typography variant={"h5"}> This is the right side of the page in an h5 header</Typography>
         </Grid>
     </Grid>)
 }
