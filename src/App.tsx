@@ -2,6 +2,9 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Dashboard } from './components/Dashboard'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { WithSideNav } from './components/WithSideNav'
+import { Table } from './components/Table'
+import { Form } from './components/Form'
+import { grey } from '@mui/material/colors'
 
 const AppRouter = () => {
   return (
@@ -9,6 +12,8 @@ const AppRouter = () => {
       <Routes>
       <Route element={<WithSideNav />}>
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/form" element={<Form/>} />
+        <Route path="/table" element={<Table/>} />
         </Route>
         </Routes>
     </BrowserRouter>
@@ -18,6 +23,9 @@ const AppRouter = () => {
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    primary: {
+      main: grey[900]
+    }
   },
 });
 
