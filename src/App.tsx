@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
-import { Dashboard } from './components/Dashboard'
+import { Dashboard } from './elements/dashboard/Dashboard'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { WithSideNav } from './components/WithSideNav'
 import { Table } from './components/Table'
