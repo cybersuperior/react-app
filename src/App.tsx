@@ -1,7 +1,7 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Dashboard } from './elements/dashboard/Dashboard'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import { WithSideNav } from './components/WithSideNav'
+import { WithSideNav } from './components/app/WithSideNav'
 import { Table } from './components/Table'
 import { Form } from './components/Form'
 import { grey } from '@mui/material/colors'
