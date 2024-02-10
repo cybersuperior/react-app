@@ -14,7 +14,6 @@ export const CustomBarChart = () => {
             data: [2, 5, 3],
           },
         ]}
-        width={300}
-        height={300}
+        height={250}
       />)
 }

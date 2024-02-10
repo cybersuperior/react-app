@@ -13,13 +13,13 @@ export const SideNavBarListItem = ({text, route, icon}: SideNavBarListItemProps)
   const theme = useTheme()
   const classes = {
     selectedItem: {
-      color: theme.palette.primary.main,
+      color: "#27293d",
       backgroundColor: theme.palette.primary.contrastText,
       pointerEvents: "none"
     },
     unSelectedItem: {
       color: theme.palette.primary.contrastText,
-      backgroundColor: theme.palette.primary.main
+      backgroundColor: "#27293d"
     }
   }
 
@@ -40,7 +40,7 @@ export const SideNavBarListItem = ({text, route, icon}: SideNavBarListItemProps)
         minWidth: "30px",
         color:
         location.pathname === route
-          ? theme.palette.primary.main
+          ? "#27293d"
           : theme.palette.primary.contrastText
       }}
     >
@@ -65,14 +65,14 @@ export const SideNavBar = () => {
         PaperProps={{
           sx: {
             
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: "#27293d",
             boxShadow: "1px 0 20px 0 #3f4d67"
           }
         }}
         sx={{
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 215,
+            width: 180,
             boxSizing: "border-box",
             whiteSpace: "nowrap",
             height: '100vh',
@@ -84,8 +84,8 @@ export const SideNavBar = () => {
       >
         <List sx={{marginTop: '60px'}}>
         <SideNavBarListItem text={"Dashboard"} route={"/dashboard"} icon={<Dashboard/>}/>
-        <SideNavBarListItem text={"Table (Coming soon)"} route={"/table"} icon={<TableRows/>}/>
-        <SideNavBarListItem text={"Form (Coming soon)"} route={"/form"} icon={<Feed/>}/>
+        <SideNavBarListItem text={"Table"} route={"/table"} icon={<TableRows/>}/>
+        <SideNavBarListItem text={"Form"} route={"/form"} icon={<Feed/>}/>
         </List>
       </Drawer>
       

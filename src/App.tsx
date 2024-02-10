@@ -25,6 +25,9 @@ const darkTheme = createTheme({
     mode: 'dark',
     primary: {
       main: grey[900]
+    },
+    background: {
+      default: "#1e1e2f"
     }
   },
 });
