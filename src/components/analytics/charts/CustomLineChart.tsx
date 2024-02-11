@@ -8,13 +8,12 @@ export const CustomLineChart = () => {
         series={[
           {
             data: [2, 5.5, 2, 8.5, 1.5, 5],
-            color: "#CD34B5",
-            showMark: false,
-            area: true
+            color: "#11FFEE",
+            showMark: false
           },
         ]}
-        height={250}
         slotProps={{legend:{hidden: true}}}
+        sx={{marginTop: "-30px"}}
       />
     </>)
 }

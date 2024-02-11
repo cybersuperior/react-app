@@ -15,7 +15,7 @@ export const CustomPieChart = ({}) => {
       series={[
         {
           data: data,
-          innerRadius: 90
+          innerRadius: 80
         },
       ]}
       slotProps={{

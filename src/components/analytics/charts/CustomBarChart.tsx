@@ -14,6 +14,7 @@ export const CustomBarChart = () => {
             data: [2, 5, 3],
           },
         ]}
-        height={250}
+        layout="horizontal"
+        sx={{marginTop: "-30px"}}
       />)
 }
