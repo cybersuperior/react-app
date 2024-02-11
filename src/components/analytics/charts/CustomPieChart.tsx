@@ -14,9 +14,13 @@ export const CustomPieChart = ({}) => {
         <PieChart
       series={[
         {
-          data: data
+          data: data,
+          innerRadius: 90
         },
       ]}
+      slotProps={{
+        legend: {hidden: true}
+      }}
       height={250}
     />
     )

@@ -1,7 +1,9 @@
 import { LineChart } from "@mui/x-charts"
 
 export const CustomLineChart = () => {
-    return (<LineChart
+    return (
+    <>
+    <LineChart
         xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
         series={[
           {
@@ -12,5 +14,7 @@ export const CustomLineChart = () => {
           },
         ]}
         height={250}
-      />)
+        slotProps={{legend:{hidden: true}}}
+      />
+    </>)
 }
