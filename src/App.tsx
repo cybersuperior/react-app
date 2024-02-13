@@ -30,6 +30,11 @@ const darkTheme = createTheme({
       default: "#1e1e2f"
     }
   },
+  typography: {
+      allVariants: {
+        fontFamily: "Inter"
+    }
+  }
 });
 
 function App() {

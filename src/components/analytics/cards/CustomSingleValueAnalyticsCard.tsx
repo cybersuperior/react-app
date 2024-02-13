@@ -26,14 +26,15 @@ export const CustomSingleValueAnalyticsCard = ({
         maxWidth: maxWidth || 250,
         height: height || 100,
         textAlign: "center",
-        backgroundColor: "#27293d"
+        backgroundColor: "#27293d",
+        borderRadius: "6px"
       }}
     >
-      <Typography sx={{ fontSize: "40px" }}>
+      <Typography sx={{ fontSize: "30px" }}>
         {value}
       </Typography>
       <Typography
-        variant={"h5"}
+        variant={"h6"}
         sx={{ fontWeight: 600, color: metric?.color || "black" }}
       >
         {metric?.name}

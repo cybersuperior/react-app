@@ -14,7 +14,7 @@ export const CustomChartCard = ({
       <>
       
       {title &&
-          <Typography sx={{ fontSize: 14, marginTop: '12px', marginLeft: '12px', marginBottom: '0px' }} color="text.primary" gutterBottom>
+          <Typography sx={{ fontSize: 14, marginTop: '14px', marginLeft: '20px', marginBottom: '0px' }} color="#F5F5F5" gutterBottom>
             {title}
           </Typography>
         }
