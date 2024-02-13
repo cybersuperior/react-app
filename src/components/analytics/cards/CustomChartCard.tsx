@@ -10,7 +10,7 @@ export const CustomChartCard = ({
   title
 }: CustomChartCardProps) => {
   return (
-    <Card sx={{ backgroundColor: '#27293d', borderRadius: '8px', height: '180px' }} >
+    <Card sx={{ backgroundColor: '#171823', borderRadius: '8px', height: '180px' }} >
       <>
       
       {title &&

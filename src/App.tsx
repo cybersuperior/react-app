@@ -32,7 +32,7 @@ const darkTheme = createTheme({
   },
   typography: {
       allVariants: {
-        fontFamily: "Inter"
+        fontFamily: "Lato"
     }
   }
 });
