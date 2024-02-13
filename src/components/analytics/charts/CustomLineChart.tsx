@@ -13,7 +13,7 @@ export const CustomLineChart = () => {
           },
         ]}
         slotProps={{legend:{hidden: true}}}
-        sx={{marginTop: "-30px"}}
+        sx={{marginTop: "-50px"}}
       />
     </>)
 }

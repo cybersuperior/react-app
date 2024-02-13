@@ -15,6 +15,6 @@ export const CustomBarChart = () => {
           },
         ]}
         layout="horizontal"
-        sx={{marginTop: "-30px"}}
+        sx={{marginTop: "-50px"}}
       />)
 }
