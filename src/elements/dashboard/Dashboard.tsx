@@ -4,6 +4,7 @@ import { CustomLineChart } from "../../components/analytics/charts/CustomLineCha
 import { CustomPieChart } from "../../components/analytics/charts/CustomPieChart"
 import { CustomChartCard } from "../../components/analytics/cards/CustomChartCard"
 import { CustomSingleValueAnalyticsCard} from "../../components/analytics/cards/CustomSingleValueAnalyticsCard"
+import { blue, cyan, green, purple } from "@mui/material/colors"
 
 
 export const Dashboard = () => {
@@ -11,44 +12,48 @@ export const Dashboard = () => {
     <Grid container spacing={2}>
        <Grid item xs={12} md={6} lg={3}>
        <CustomSingleValueAnalyticsCard
-              value={"300"}
+              value={"12,000"}
               metric={{
-                name: "Tracked Plants",
+                name: "Assets Tracked",
+                color: purple[300]
               }}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
        <CustomSingleValueAnalyticsCard
-              value={"300"}
+              value={"3,000"}
               metric={{
-                name: "Tracked Plants",
+                name: "On-Premises",
+                color: blue[300]
               }}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
        <CustomSingleValueAnalyticsCard
-              value={"300"}
+              value={"9,000"}
               metric={{
-                name: "Tracked Plants",
+                name: "Off-Premises",
+                color: cyan[300]
               }}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
        <CustomSingleValueAnalyticsCard
-              value={"300"}
+              value={"1,000"}
               metric={{
-                name: "Tracked Plants",
+                name: "Transfers Today",
+                color: green[300]
               }}
             />
+      </Grid>
+      <Grid item xs={12} md={6} lg={6}>
+        <CustomChartCard title={"Top Transfer Locations"} chart={<CustomBarChart />} />
+      </Grid>
+      <Grid item xs={12} md={6} lg={6}>
+        <CustomChartCard title={"Daily Transfers"} chart={<CustomLineChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={4}>
-        <CustomChartCard title={"Bar Chart Example"} chart={<CustomBarChart />} />
-      </Grid>
-      <Grid item xs={12} md={6} lg={8}>
-        <CustomChartCard title={"Line Chart Example"} chart={<CustomLineChart />} />
-      </Grid>
-      <Grid item xs={12} md={6} lg={4}>
-        <CustomChartCard title={"Pie Chart Example"} chart={<CustomPieChart />} />
+        <CustomChartCard title={"On-Premises vs Off-Premises"} chart={<CustomPieChart />} />
       </Grid>
     </Grid>)
 }

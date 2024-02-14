@@ -13,13 +13,13 @@ export const SideNavBarListItem = ({text, route, icon}: SideNavBarListItemProps)
   const theme = useTheme()
   const classes = {
     selectedItem: {
-      color: "#27293d",
+      color: "#2b2b35",
       backgroundColor: theme.palette.primary.contrastText,
       pointerEvents: "none"
     },
     unSelectedItem: {
       color: theme.palette.primary.contrastText,
-      backgroundColor: "#27293d"
+      backgroundColor: "#2b2b35"
     }
   }
 
@@ -40,7 +40,7 @@ export const SideNavBarListItem = ({text, route, icon}: SideNavBarListItemProps)
         minWidth: "30px",
         color:
         location.pathname === route
-          ? "#27293d"
+          ? "#2b2b35"
           : theme.palette.primary.contrastText
       }}
     >
@@ -65,7 +65,7 @@ export const SideNavBar = () => {
         PaperProps={{
           sx: {
             
-            backgroundColor: "#27293d",
+            backgroundColor: "#2b2b35",
             boxShadow: "1px 0 20px 0 #3f4d67"
           }
         }}

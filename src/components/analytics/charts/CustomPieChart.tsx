@@ -21,7 +21,6 @@ export const CustomPieChart = ({}) => {
       slotProps={{
         legend: {hidden: true}
       }}
-      height={250}
     />
     )
 }

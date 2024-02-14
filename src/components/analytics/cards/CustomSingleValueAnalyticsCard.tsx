@@ -1,4 +1,5 @@
-import { Paper, Typography } from "@mui/material"
+import { LocationSearching } from "@mui/icons-material"
+import { Card, Paper, Typography } from "@mui/material"
 
 type CustomSingleValueAnalyticsCardProps = {
   maxWidth?: number
@@ -19,26 +20,24 @@ export const CustomSingleValueAnalyticsCard = ({
   metric
 }: CustomSingleValueAnalyticsCardProps) => {
   return (
-    <Paper
-      elevation={8}
+    <Card
       sx={{
         padding: "15px",
         maxWidth: maxWidth || 250,
         height: height || 100,
         textAlign: "center",
-        backgroundColor: "#27293d",
+        backgroundColor: "#171823",
         borderRadius: "6px"
       }}
     >
-      <Typography sx={{ fontSize: "30px" }}>
-        {value}
+      <Typography sx={{ fontSize: "28px" }}>
+ {value}
       </Typography>
       <Typography
-        variant={"h6"}
-        sx={{ fontWeight: 600, color: metric?.color || "black" }}
+        sx={{ color: metric?.color || "black", fontSize: "18px" }}
       >
-        {metric?.name}
+            <LocationSearching/>   {metric?.name}
       </Typography>
-    </Paper>
+    </Card>
   )
 }
