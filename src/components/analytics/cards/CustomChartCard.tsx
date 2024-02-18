@@ -3,14 +3,16 @@ import { Card,  Typography } from "@mui/material"
 type CustomChartCardProps = {
   chart: React.ReactNode;
   title?: string
+  height: string
 }
 
 export const CustomChartCard = ({
   chart,
-  title
+  title, 
+  height
 }: CustomChartCardProps) => {
   return (
-    <Card sx={{ backgroundColor: '#171823', borderRadius: '8px', height: '180px' }} >
+    <Card sx={{ backgroundColor: '#171823', borderRadius: '8px', height: height }} >
       <>
       
       {title &&

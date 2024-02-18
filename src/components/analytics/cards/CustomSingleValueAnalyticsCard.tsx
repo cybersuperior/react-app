@@ -1,9 +1,11 @@
-import { LocationSearching } from "@mui/icons-material"
-import { Card, Paper, Typography } from "@mui/material"
+import { CompassCalibration, CompassCalibrationRounded, LocationSearching, LocationSearchingOutlined, LocationSearchingRounded } from "@mui/icons-material"
+import { Avatar, Box, Card, Paper, Typography } from "@mui/material"
+import React from "react"
 
 type CustomSingleValueAnalyticsCardProps = {
   maxWidth?: number
   height?: number
+  Icon?: React.ElementType
   value: number | string
   metric: CustomSingleValueAnalyticsCardMetric
 }
@@ -16,6 +18,7 @@ type CustomSingleValueAnalyticsCardMetric = {
 export const CustomSingleValueAnalyticsCard = ({
   maxWidth,
   height,
+  Icon,
   value,
   metric
 }: CustomSingleValueAnalyticsCardProps) => {
@@ -31,12 +34,15 @@ export const CustomSingleValueAnalyticsCard = ({
       }}
     >
       <Typography sx={{ fontSize: "28px" }}>
- {value}
+        {value}
       </Typography>
       <Typography
-        sx={{ color: metric?.color || "black", fontSize: "18px" }}
+        sx={{ color: metric?.color || "black", fontSize: "18px", verticalAlign: "middle", display: "inline-flex" }}
       >
-            <LocationSearching/>   {metric?.name}
+        <Box sx={{marginTop: "2px", marginRight: "6px"}} >
+          {Icon && <Icon sx={{fontSize:"16px"}}/>}
+        </Box>
+        {metric?.name}
       </Typography>
     </Card>
   )

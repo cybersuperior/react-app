@@ -5,6 +5,7 @@ import { CustomPieChart } from "../../components/analytics/charts/CustomPieChart
 import { CustomChartCard } from "../../components/analytics/cards/CustomChartCard"
 import { CustomSingleValueAnalyticsCard} from "../../components/analytics/cards/CustomSingleValueAnalyticsCard"
 import { blue, cyan, green, purple } from "@mui/material/colors"
+import { CompassCalibrationRounded, HomeWorkRounded, LocalShippingRounded, PushPinRounded } from "@mui/icons-material"
 
 
 export const Dashboard = () => {
@@ -17,6 +18,7 @@ export const Dashboard = () => {
                 name: "Assets Tracked",
                 color: purple[300]
               }}
+              Icon={CompassCalibrationRounded}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
@@ -26,6 +28,7 @@ export const Dashboard = () => {
                 name: "On-Premises",
                 color: blue[300]
               }}
+              Icon={HomeWorkRounded}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
@@ -35,6 +38,7 @@ export const Dashboard = () => {
                 name: "Off-Premises",
                 color: cyan[300]
               }}
+              Icon={PushPinRounded}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
@@ -44,16 +48,20 @@ export const Dashboard = () => {
                 name: "Transfers Today",
                 color: green[300]
               }}
+              Icon={LocalShippingRounded}
             />
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
-        <CustomChartCard title={"Top Transfer Locations"} chart={<CustomBarChart />} />
+        <CustomChartCard title={"Top 5 Transfer Locations"} height="220px" chart={<CustomBarChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
-        <CustomChartCard title={"Daily Transfers"} chart={<CustomLineChart />} />
+        <CustomChartCard title={"Daily Transfers"} height="220px" chart={<CustomLineChart />} />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
-        <CustomChartCard title={"On-Premises vs Off-Premises"} chart={<CustomPieChart />} />
+      <Grid item xs={12} md={6} lg={6}>
+        
+      </Grid>
+      <Grid item xs={12} md={6} lg={3}>
+        <CustomChartCard title={"On-Premises vs Off-Premises"} height="200px" chart={<CustomPieChart />} />
       </Grid>
     </Grid>)
 }
