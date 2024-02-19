@@ -1,9 +1,9 @@
-import { cyan } from "@mui/material/colors";
+import { blue,  deepOrange } from "@mui/material/colors";
 import { PieChart } from "@mui/x-charts"
 
 const data = [
-    { label: 'On-Premises', value: 3000, color: '#64b5f6' },
-    { label: 'Off-Premises', value: 9000, color: cyan[300] }
+    { label: 'Available', value: 1500, color: deepOrange[300] },
+    { label: 'Leased', value: 10500, color: blue[300] }
   ];
 
 export const CustomPieChart = ({}) => {
@@ -11,8 +11,7 @@ export const CustomPieChart = ({}) => {
         <PieChart
       series={[
         {
-          data: data,
-          innerRadius: 50
+          data: data
         },
       ]}
       slotProps={{

@@ -26,7 +26,7 @@ export const CustomSingleValueAnalyticsCard = ({
     <Card
       sx={{
         padding: "15px",
-        maxWidth: maxWidth || 250,
+        maxWidth: maxWidth || '100%',
         height: height || 100,
         textAlign: "center",
         backgroundColor: "#171823",

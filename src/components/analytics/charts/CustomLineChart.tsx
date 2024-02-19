@@ -1,19 +1,39 @@
+import { green } from "@mui/material/colors"
 import { LineChart } from "@mui/x-charts"
 
 export const CustomLineChart = () => {
-    return (
+  return (
     <>
-    <LineChart
-        xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
+      <LineChart
+        xAxis={[{
+          data: [
+            0,1,2,3,4,5,6],
+    
+        }]}
         series={[
           {
-            data: [2, 5.5, 2, 8.5, 1.5, 5],
-            color: "#11FFEE",
-            showMark: false
+            id: "Line-Area-Series1",
+            data: [1000, 1200, 800, 700, 1100, 900, 600],
+            area: true,
+            color: green["A400"],
+            showMark: false,
+
           },
         ]}
-        slotProps={{legend:{hidden: true}}}
-        sx={{marginTop: "-50px"}}
-      />
+        slotProps={{ legend: { hidden: true } }}
+        sx={{
+          marginTop: "-50px",
+          '& .MuiAreaElement-series-Line-Area-Series1': {
+            fill: "url('#lineAreaSeries1Gradient')",
+          },
+        }}
+      >
+        <defs>
+          <linearGradient id="lineAreaSeries1Gradient" gradientTransform="rotate(90)">
+
+            <stop offset="100%" stopColor={green["A400"]} stopOpacity={.1} />
+          </linearGradient>
+        </defs>
+      </LineChart>
     </>)
 }

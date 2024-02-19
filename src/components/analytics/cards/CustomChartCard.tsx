@@ -1,4 +1,4 @@
-import { Card,  Typography } from "@mui/material"
+import { Card, Typography } from "@mui/material"
 
 type CustomChartCardProps = {
   chart: React.ReactNode;
@@ -8,15 +8,22 @@ type CustomChartCardProps = {
 
 export const CustomChartCard = ({
   chart,
-  title, 
+  title,
   height
 }: CustomChartCardProps) => {
   return (
     <Card sx={{ backgroundColor: '#171823', borderRadius: '8px', height: height }} >
       <>
-      
-      {title &&
-          <Typography sx={{ fontSize: 14, marginTop: '14px', marginLeft: '20px', marginBottom: '0px' }} color="#F5F5F5" gutterBottom>
+        {title &&
+          <Typography
+            sx={{
+              fontSize: 14,
+              marginTop: '14px',
+              marginLeft: '20px',
+              marginBottom: '0px'
+            }}
+            color="#F5F5F5"
+            gutterBottom>
             {title}
           </Typography>
         }
