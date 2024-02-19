@@ -1,4 +1,4 @@
-import { cyan } from "@mui/material/colors";
+import { cyan, green } from "@mui/material/colors";
 import { BarChart } from "@mui/x-charts"
 
 
@@ -30,7 +30,7 @@ export const CustomHorizontalBarChart = () => {
     return (<BarChart
       dataset={dataset}
       yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ id:"Transfers-Series1", dataKey: 'expirations', color: cyan[300] }]}
+      series={[{ id:"Transfers-Series1", dataKey: 'expirations', color:  green["A400"] }]}
       layout="horizontal"
       sx={{
         marginTop: "-60px"

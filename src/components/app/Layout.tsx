@@ -10,7 +10,7 @@ const LayoutContainer = styled('div')({
   flexGrow: 1,
   overflow: "auto",
   height: "100vh",
-  padding: "24px 48px"
+  padding: "12px 48px"
 });
 
 export const Layout = ({ children }: LayoutProps) => {

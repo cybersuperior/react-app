@@ -5,7 +5,7 @@ import { CustomPieChart } from "../../components/analytics/charts/CustomPieChart
 import { CustomChartCard } from "../../components/analytics/cards/CustomChartCard"
 import { CustomSingleValueAnalyticsCard } from "../../components/analytics/cards/CustomSingleValueAnalyticsCard"
 import { blue, deepOrange, green, purple } from "@mui/material/colors"
-import { AddHomeWorkRounded, CompassCalibrationRounded, HomeWorkRounded, LocalShippingRounded, LockOpenRounded, LockRounded, PushPinRounded, ScheduleRounded } from "@mui/icons-material"
+import { AddCircleRounded, AddHomeWorkRounded, AddRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
 import { CustomVerticalBarChart } from "../../components/analytics/charts/CustomVerticalBarChart"
 
 
@@ -24,17 +24,17 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"1,500"}
+          value={"1,000"}
           metric={{
             name: "Available",
             color: deepOrange[300]
           }}
-          Icon={AddHomeWorkRounded}
+          Icon={AddCircleRounded}
         />
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"10,500"}
+          value={"11,000"}
           metric={{
             name: "Leased",
             color: blue[300]
