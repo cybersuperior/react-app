@@ -7,6 +7,7 @@ import { CustomSingleValueAnalyticsCard } from "../../components/analytics/cards
 import { blue, deepOrange, green, purple } from "@mui/material/colors"
 import { AddCircleRounded, AddHomeWorkRounded, AddRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
 import { CustomVerticalBarChart } from "../../components/analytics/charts/CustomVerticalBarChart"
+import { CustomDenseTable } from "../../components/analytics/charts/CustomDenseTable"
 
 
 export const Dashboard = () => {
@@ -24,7 +25,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"1,000"}
+          value={"2,500"}
           metric={{
             name: "Available",
             color: deepOrange[300]
@@ -34,7 +35,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"11,000"}
+          value={"9,500"}
           metric={{
             name: "Leased",
             color: blue[300]
@@ -53,7 +54,7 @@ export const Dashboard = () => {
         />
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
-      <CustomChartCard
+        <CustomChartCard
           title={"Building Breakdown"}
           height="220px"
           chart={<CustomVerticalBarChart />} />
@@ -66,7 +67,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
         <CustomChartCard
-          title={"Upcoming Lease Expirations"}
+          title={"Number Of Upcoming Lease Expirations"}
           height="200px"
           chart={<CustomHorizontalBarChart />} />
       </Grid>
@@ -75,6 +76,12 @@ export const Dashboard = () => {
           title={"Available vs Leased"}
           height="200px"
           chart={<CustomPieChart />} />
+      </Grid>
+      <Grid item xs={12} md={6} lg={3}>
+        <CustomChartCard
+          title={"Expirations By Building"}
+          height="200px"
+          chart={<CustomDenseTable />} />
       </Grid>
     </Grid>)
 }

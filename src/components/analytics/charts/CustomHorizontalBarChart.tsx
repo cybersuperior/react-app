@@ -6,23 +6,23 @@ const dataset = [
   
   {
     expirations: 400,
-    month: 'Oct',
+    month: 'Mar',
   },
   {
     expirations: 200,
-    month: 'Nov',
+    month: 'Apr',
   },
   {
     expirations: 850,
-    month: 'Dec',
+    month: 'May',
   },
   {
     expirations: 700,
-    month: 'Jan',
+    month: 'June',
   },
   {
     expirations: 400,
-    month: 'Feb',
+    month: 'July',
   },
 ];
 

@@ -1,15 +1,14 @@
 import { blue, deepOrange } from "@mui/material/colors";
 import { BarChart } from "@mui/x-charts";
 
-const availableData = [75, 150, 125, 150, 125, 200, 175];
-const leasedData = [2000, 1500, 3000, 1000, 1500, 1200, 800];
+const availableData = [325, 400, 325, 350, 325];
+const leasedData = [1700, 1300, 2800, 800, 1200];
 const xLabels = [
   'Bldg A',
   'Bldg B',
   'Bldg C',
   'Bldg D',
-  'Bldg E',
-  'Bldg F'
+  'Bldg E'
 ];
 
 export const CustomVerticalBarChart = () => {
@@ -21,8 +20,8 @@ export const CustomVerticalBarChart = () => {
         }
       }}
       series={[
-        { data: leasedData, label: 'leased', id: 'uvId', stack: 'total', color: blue[400] },
-        { data: availableData, label: 'available', id: 'pvId', stack: 'total' , color: deepOrange[400]},
+        { data: leasedData, label: 'leased', id: 'uvId', stack: 'total', color: blue[300] },
+        { data: availableData, label: 'available', id: 'pvId', stack: 'total' , color: deepOrange[300]},
       ]}
       xAxis={[{ data: xLabels, scaleType: 'band' }]}
       sx={{

@@ -1,4 +1,4 @@
-import { green, purple } from "@mui/material/colors"
+import { purple } from "@mui/material/colors"
 import { LineChart } from "@mui/x-charts"
 
 export const CustomLineChart = () => {
