@@ -2,7 +2,7 @@ import { purple } from "@mui/material/colors"
 import { LineChart } from "@mui/x-charts"
 
 export const CustomLineChart = () => {
-  const monthToNumber = ["Mar", "Apr", "May", "June", "July", "Aug", "Sept"]
+  const monthToNumber = ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"]
   return (
     <>
       <LineChart
@@ -13,7 +13,7 @@ export const CustomLineChart = () => {
         series={[
           {
             id: "Line-Area-Series1",
-            data: [40000, 50000, 30000, 35000, 40000, 20000, 10000],
+            data: [40000, 50000, 38000, 41000, 40000, 50000, 45000],
             area: true,
             color: purple[300],
             showMark: false,

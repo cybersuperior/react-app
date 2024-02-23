@@ -2,34 +2,30 @@ import { Table, TableBody, TableCell, TableRow } from "@mui/material"
 
 const rows = [{
     name: "Bldg A",
-    number: 60
-},{
+    number: 15
+}, {
     name: "Bldg B",
-    number: 110
-},{
+    number: 10
+}, {
     name: "Bldg C",
-    number: 50
-},{
+    number: 30
+}, {
     name: "Bldg D",
-    number: 70
-},{
-    name: "Bldg E",
-    number: 90
-},{
-    name: "Bldg F",
     number: 20
+}, {
+    name: "Bldg E",
+    number: 10
 }]
 export const CustomDenseTable = () => {
     return (<>
-        <Table size="small">
+        <Table size="small" sx={{ marginTop: "5px" }}>
             <TableBody>
-                    {rows.map(row => (
-                        
-                <TableRow sx={{minWidth: "90%", fontSize: "2px", textAlign: "center"}}>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell>{row.number}</TableCell>
-                </TableRow>
-                    ))}
+                {rows.map(row => (
+                    <TableRow sx={{ minWidth: "90%", fontSize: "2px", textAlign: "center" }}>
+                        <TableCell>{row.name}</TableCell>
+                        <TableCell>{row.number}</TableCell>
+                    </TableRow>
+                ))}
             </TableBody>
         </Table>
     </>)

@@ -5,7 +5,7 @@ import { CustomPieChart } from "../../components/analytics/charts/CustomPieChart
 import { CustomChartCard } from "../../components/analytics/cards/CustomChartCard"
 import { CustomSingleValueAnalyticsCard } from "../../components/analytics/cards/CustomSingleValueAnalyticsCard"
 import { blue, deepOrange, green, purple } from "@mui/material/colors"
-import { AddCircleRounded, AddHomeWorkRounded, AddRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
+import { AddCircleRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
 import { CustomVerticalBarChart } from "../../components/analytics/charts/CustomVerticalBarChart"
 import { CustomDenseTable } from "../../components/analytics/charts/CustomDenseTable"
 
@@ -15,7 +15,7 @@ export const Dashboard = () => {
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"12,000"}
+          value={"1,000"}
           metric={{
             name: "Condos",
             color: purple[300]
@@ -25,7 +25,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"2,500"}
+          value={"210"}
           metric={{
             name: "Available",
             color: deepOrange[300]
@@ -35,7 +35,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"9,500"}
+          value={"790"}
           metric={{
             name: "Leased",
             color: blue[300]
@@ -45,7 +45,7 @@ export const Dashboard = () => {
       </Grid>
       <Grid item xs={12} sm={6} md={6} lg={3}>
         <CustomSingleValueAnalyticsCard
-          value={"400"}
+          value={"85"}
           metric={{
             name: "Expiring",
             color: green["A400"]
@@ -56,31 +56,31 @@ export const Dashboard = () => {
       <Grid item xs={12} md={6} lg={6}>
         <CustomChartCard
           title={"Building Breakdown"}
-          height="220px"
+          height="36vh"
           chart={<CustomVerticalBarChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
         <CustomChartCard
           title={"Total Rent Collected"}
-          height="220px"
+          height="36vh"
           chart={<CustomLineChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={6}>
         <CustomChartCard
           title={"Number Of Upcoming Lease Expirations"}
-          height="200px"
+          height="35vh"
           chart={<CustomHorizontalBarChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
         <CustomChartCard
           title={"Available vs Leased"}
-          height="200px"
+          height="35vh"
           chart={<CustomPieChart />} />
       </Grid>
       <Grid item xs={12} md={6} lg={3}>
         <CustomChartCard
           title={"Expirations By Building"}
-          height="200px"
+          height="35vh"
           chart={<CustomDenseTable />} />
       </Grid>
     </Grid>)

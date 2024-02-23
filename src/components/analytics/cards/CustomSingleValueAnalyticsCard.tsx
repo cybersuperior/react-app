@@ -4,7 +4,7 @@ import React from "react"
 
 type CustomSingleValueAnalyticsCardProps = {
   maxWidth?: number
-  height?: number
+  height?: string
   Icon?: React.ElementType
   value: number | string
   metric: CustomSingleValueAnalyticsCardMetric

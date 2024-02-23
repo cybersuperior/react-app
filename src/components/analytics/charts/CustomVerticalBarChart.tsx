@@ -1,8 +1,8 @@
 import { blue, deepOrange } from "@mui/material/colors";
 import { BarChart } from "@mui/x-charts";
 
-const availableData = [325, 400, 325, 350, 325];
-const leasedData = [1700, 1300, 2800, 800, 1200];
+const availableData = [55, 45, 10, 60, 40];
+const leasedData = [200, 160, 120, 140, 170];
 const xLabels = [
   'Bldg A',
   'Bldg B',

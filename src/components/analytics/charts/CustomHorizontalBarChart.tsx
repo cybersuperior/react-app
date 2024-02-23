@@ -1,27 +1,27 @@
-import { cyan, green } from "@mui/material/colors";
+import { green } from "@mui/material/colors";
 import { BarChart } from "@mui/x-charts"
 
 
 const dataset = [
   
   {
-    expirations: 400,
+    expirations: 85,
     month: 'Mar',
   },
   {
-    expirations: 200,
+    expirations: 40,
     month: 'Apr',
   },
   {
-    expirations: 850,
+    expirations: 50,
     month: 'May',
   },
   {
-    expirations: 700,
+    expirations: 30,
     month: 'June',
   },
   {
-    expirations: 400,
+    expirations: 80,
     month: 'July',
   },
 ];

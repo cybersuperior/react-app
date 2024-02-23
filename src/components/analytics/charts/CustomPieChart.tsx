@@ -2,12 +2,12 @@ import { blue,  deepOrange } from "@mui/material/colors";
 import { PieChart } from "@mui/x-charts"
 
 const data = [
-    { label: 'Available', value: 2500, color: deepOrange[300] },
-    { label: 'Leased', value: 9500, color: blue[300] }
+    { label: 'Available', value: 210, color: deepOrange[300] },
+    { label: 'Leased', value: 790, color: blue[300] }
   ];
 
 export const CustomPieChart = ({}) => {
-   const total = 12000;
+   const total = 1000;
     return (
         <PieChart
       series={[
