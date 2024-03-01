@@ -1,8 +1,11 @@
-import { purple } from "@mui/material/colors"
+import { useTheme } from "@mui/material"
 import { LineChart } from "@mui/x-charts"
 
 export const CustomLineChart = () => {
   const monthToNumber = ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan", "Feb"]
+  const theme = useTheme()
+  const chartColor = theme.palette.charts.purple.main
+
   return (
     <>
       <LineChart
@@ -15,7 +18,7 @@ export const CustomLineChart = () => {
             id: "Line-Area-Series1",
             data: [40000, 50000, 38000, 41000, 40000, 50000, 45000],
             area: true,
-            color: purple[300],
+            color: chartColor,
             showMark: false,
 
           },
@@ -32,7 +35,7 @@ export const CustomLineChart = () => {
         <defs>
           <linearGradient id="lineAreaSeries1Gradient" gradientTransform="rotate(90)">
 
-            <stop offset="100%" stopColor={purple[300]} stopOpacity={.1} />
+            <stop offset="100%" stopColor={chartColor} stopOpacity={.1} />
           </linearGradient>
         </defs>
       </LineChart>

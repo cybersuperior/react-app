@@ -1,4 +1,4 @@
-import { blue, deepOrange } from "@mui/material/colors";
+import { useTheme } from "@mui/material";
 import { BarChart } from "@mui/x-charts";
 
 const availableData = [55, 45, 10, 60, 40];
@@ -12,16 +12,19 @@ const xLabels = [
 ];
 
 export const CustomVerticalBarChart = () => {
+  const theme = useTheme()
+  const chartColors = theme.palette.charts
+
   return (
     <BarChart
-    slotProps={{
+      slotProps={{
         legend: {
-            hidden: true
+          hidden: true
         }
       }}
       series={[
-        { data: leasedData, label: 'leased', id: 'uvId', stack: 'total', color: blue[300] },
-        { data: availableData, label: 'available', id: 'pvId', stack: 'total' , color: deepOrange[300]},
+        { data: leasedData, label: 'leased', id: 'uvId', stack: 'total', color: chartColors.blue.main },
+        { data: availableData, label: 'available', id: 'pvId', stack: 'total', color: chartColors.deepOrange.main },
       ]}
       xAxis={[{ data: xLabels, scaleType: 'band' }]}
       sx={{

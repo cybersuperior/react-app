@@ -1,4 +1,4 @@
-import { Card, Typography } from "@mui/material"
+import { Card, Typography, useTheme } from "@mui/material"
 
 type CustomChartCardProps = {
   chart: React.ReactNode;
@@ -11,6 +11,8 @@ export const CustomChartCard = ({
   title,
   height
 }: CustomChartCardProps) => {
+  const theme = useTheme()
+
   return (
     <Card sx={{ backgroundColor: '#171823', borderRadius: '8px', height: height }} >
       <>
@@ -22,7 +24,7 @@ export const CustomChartCard = ({
               marginLeft: '20px',
               marginBottom: '0px'
             }}
-            color="#F5F5F5"
+            color={theme.palette.charts.titleColor}
             gutterBottom>
             {title}
           </Typography>

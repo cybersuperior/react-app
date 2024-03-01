@@ -1,9 +1,9 @@
+import { useTheme } from "@mui/material";
 import { green } from "@mui/material/colors";
 import { BarChart } from "@mui/x-charts"
 
 
 const dataset = [
-  
   {
     expirations: 85,
     month: 'Mar',
@@ -27,14 +27,16 @@ const dataset = [
 ];
 
 export const CustomHorizontalBarChart = () => {
-    return (<BarChart
-      dataset={dataset}
-      yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[{ id:"Transfers-Series1", dataKey: 'expirations', color:  green["A400"] }]}
-      layout="horizontal"
-      sx={{
-        marginTop: "-60px"
-      }}
-      >
-      </BarChart>)
+  const theme = useTheme()
+  return (
+  <BarChart
+    dataset={dataset}
+    yAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+    series={[{ id: "Transfers-Series1", dataKey: 'expirations', color: theme.palette.charts.green.main }]}
+    layout="horizontal"
+    sx={{
+      marginTop: "-60px"
+    }}
+  >
+  </BarChart>)
 }

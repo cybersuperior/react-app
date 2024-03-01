@@ -1,10 +1,10 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import { Dashboard } from './elements/dashboard/Dashboard'
-import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider } from '@mui/material/styles'
 import { WithSideNav } from './components/app/WithSideNav'
 import { Table } from './elements/table/Table'
 import { Form } from './elements/form/Form'
-import { grey } from '@mui/material/colors'
+import { theme } from './theme'
 
 const AppRouter = () => {
   return (
@@ -20,26 +20,31 @@ const AppRouter = () => {
   )
 }
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: grey[900]
-    },
-    background: {
-      default: "#2b2b35"
-    }
-  },
-  typography: {
-      allVariants: {
-        fontFamily: "Lato"
+declare module "@mui/material/styles" {
+  interface Palette {
+    charts: {
+      titleColor: string
+      purple: Palette["primary"]
+      deepOrange: Palette["primary"]
+      blue: Palette["primary"]
+      green: Palette["primary"]
     }
   }
-});
+  interface PaletteOptions {
+    charts: {
+      titleColor: string
+      purple: PaletteOptions["primary"]
+      deepOrange: PaletteOptions["primary"]
+      blue: PaletteOptions["primary"]
+      green: PaletteOptions["primary"]
+    }
+  }
+}
+
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
     <AppRouter/>
     </ThemeProvider>
   )

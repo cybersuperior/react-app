@@ -12,10 +12,12 @@ const rows = [{
 }, {
     name: "Bldg D",
     number: 20
-}, {
+},
+{
     name: "Bldg E",
     number: 10
 }]
+
 export const CustomDenseTable = () => {
     return (<>
         <Table size="small" sx={{ marginTop: "5px" }}>

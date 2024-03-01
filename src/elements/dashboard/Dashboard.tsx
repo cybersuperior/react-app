@@ -1,16 +1,18 @@
-import { Grid } from "@mui/material"
+import { Grid, useTheme } from "@mui/material"
+import { blue, deepOrange, green, purple } from "@mui/material/colors"
+import { AddCircleRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
 import { CustomHorizontalBarChart } from "../../components/analytics/charts/CustomHorizontalBarChart"
 import { CustomLineChart } from "../../components/analytics/charts/CustomLineChart"
 import { CustomPieChart } from "../../components/analytics/charts/CustomPieChart"
 import { CustomChartCard } from "../../components/analytics/cards/CustomChartCard"
 import { CustomSingleValueAnalyticsCard } from "../../components/analytics/cards/CustomSingleValueAnalyticsCard"
-import { blue, deepOrange, green, purple } from "@mui/material/colors"
-import { AddCircleRounded, HomeWorkRounded, LockRounded, ScheduleRounded } from "@mui/icons-material"
 import { CustomVerticalBarChart } from "../../components/analytics/charts/CustomVerticalBarChart"
 import { CustomDenseTable } from "../../components/analytics/charts/CustomDenseTable"
 
-
 export const Dashboard = () => {
+  const theme = useTheme()
+  const chartColors = theme.palette.charts
+
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} sm={6} md={6} lg={3}>
@@ -18,7 +20,7 @@ export const Dashboard = () => {
           value={"1,000"}
           metric={{
             name: "Condos",
-            color: purple[300]
+            color: chartColors.purple.main
           }}
           Icon={HomeWorkRounded}
         />
@@ -28,7 +30,7 @@ export const Dashboard = () => {
           value={"210"}
           metric={{
             name: "Available",
-            color: deepOrange[300]
+            color: chartColors.deepOrange.main
           }}
           Icon={AddCircleRounded}
         />
@@ -38,7 +40,7 @@ export const Dashboard = () => {
           value={"790"}
           metric={{
             name: "Leased",
-            color: blue[300]
+            color: chartColors.blue.main
           }}
           Icon={LockRounded}
         />
@@ -48,7 +50,7 @@ export const Dashboard = () => {
           value={"85"}
           metric={{
             name: "Expiring",
-            color: green["A400"]
+            color: chartColors.green.main
           }}
           Icon={ScheduleRounded}
         />
